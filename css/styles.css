@@ -5980,3 +5980,23 @@ body.patient-info .top-bar,
 body.patient-info .top-bar a,
 body.patient-info .top-bar span { color: #fff !important; }
 
+
+
+/* === Patch: ensure review CTA buttons space/stack properly on small screens === */
+.google-reviews-static .cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  white-space: normal; /* override previous nowrap */
+  padding: 0; /* tighten spacing around buttons */
+}
+@media (max-width: 600px){
+  .google-reviews-static .cta{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .google-reviews-static .cta a{
+    width: 100%;
+  }
+}
+/* === End patch === */
