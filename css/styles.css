@@ -5982,7 +5982,54 @@ body.patient-info .top-bar span { color: #fff !important; }
 
 
 
-/* === Patch: Defensive sizing for footer social SVGs on GitHub Pages === */
-.footer .icons-only a svg { width: 20px !important; height: 20px !important; }
-.footer .icons-only a { width: 32px; height: 32px; }
+/* === Patch: Footer social links === */
+.footer .social-links,
+.footer-social .social-links {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  padding: 0;
+  margin: .5rem 0 0 0;
+  flex-wrap: wrap;
+}
+.footer-social .social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+}
+.footer-social .social-links svg { width: 20px; height: 20px; }
+@media (max-width: 600px){
+  .footer .footer-container {
+    gap: 1.25rem;
+  }
+}
 /* === End patch === */
+
+
+/* === Patch: social icons under Office Hours (icons only) === */
+.footer .icons-only {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+.footer .icons-only a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.footer .icons-only svg { width: 20px; height: 20px; }
+.footer .icons-only span { display: none !important; } /* ensure icon-only */
+@media (max-width: 600px){
+  .footer .icons-only { gap: 10px; }
+}
+/* === End patch === */
+
+/* Footer social icon sizing (defensive) */
+.footer .icons-only a svg { width: 20px !important; height: 20px !important; }
+.footer .icons-only a      { width: 32px; height: 32px; }
+
