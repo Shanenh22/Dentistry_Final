@@ -1,0 +1,63 @@
+/*
+ * blog-post.css
+ *
+ * Additional styling for individual blog article pages. These rules
+ * focus on improved readability and align with the design brief for
+ * Spring Valley Dental Associates. Text is set larger with generous line
+ * height, headings use the brand colours and fonts, and subtle
+ * separators provide visual breathing room between sections. When
+ * combined with the existing site styles this file creates a calm,
+ * modern reading experience that remains consistent with the rest of
+ * the website.
+ */
+
+/* Restrict the maximum width of blog content for easier reading */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--color-text-primary);
+}
+
+/* Headings are set in Montserrat and feature a coloured left border
+   to draw the eye without overwhelming the page. */
+.blog-post h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  border-left: 4px solid var(--color-primary-accent);
+  padding-left: 0.75rem;
+}
+
+/* Paragraph spacing for comfortable reading rhythm */
+.blog-post p {
+  margin-bottom: 1.25rem;
+}
+
+/* Emphasised text appears in the secondary colour for subtle
+   differentiation */
+.blog-post em {
+  color: var(--color-text-secondary);
+}
+
+/* Horizontal rules serve as separators between meta information and
+   content; the colour ties back into the neutral palette */
+.blog-post hr {
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid var(--color-neutral-medium);
+}
+
+/* Adjust button spacing within blog posts */
+.blog-post .button-group {
+  margin-top: 2rem;
+}
+
+/* Ensure the last paragraph has breathing room at the bottom */
+.blog-post p:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,200 @@
+/* Extracted from patient-info.html to improve maintainability */
+/* Additional styles for the updated patient-info page */
+
+/* Make form buttons match the header "Book Online" button style */
+.form-button.new-patient-btn,
+.form-button.existing-patient-btn {
+  background: var(--sky-blue, #3DA6D5);
+  color: #fff !important;
+  border: 1px solid var(--sky-blue, #3DA6D5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.05rem;
+  border-radius: 0.55rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.form-button.new-patient-btn:hover,
+.form-button.existing-patient-btn:hover {
+  background: var(--dallas-navy, #0E365A);
+  border-color: var(--dallas-navy, #0E365A);
+  color: #fff !important;
+}
+
+/* Add plus signs to dropdown summaries */
+.info-collapse > summary {
+  position: relative;
+  padding-right: 2rem;
+}
+
+.info-collapse > summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--sky-blue, #3DA6D5);
+  transition: transform 0.3s ease;
+}
+
+.info-collapse[open] > summary::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* Uniform bottom buttons styling */
+.bottom-cta .button-primary,
+.bottom-cta .button-secondary,
+.contact-btn.primary,
+.contact-btn.secondary,
+.contact-btn.tertiary {
+  background: var(--sky-blue, #3DA6D5);
+  color: #fff !important;
+  border: 1px solid var(--sky-blue, #3DA6D5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.05rem;
+  border-radius: 0.55rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0.25rem;
+}
+
+.bottom-cta .button-primary:hover,
+.bottom-cta .button-secondary:hover,
+.contact-btn.primary:hover,
+.contact-btn.secondary:hover,
+.contact-btn.tertiary:hover {
+  background: var(--dallas-navy, #0E365A);
+  border-color: var(--dallas-navy, #0E365A);
+  color: #fff !important;
+}
+
+/* Ensure uniform button group spacing */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* PATIENT INFO PAGE: Override global section spacing to eliminate gaps */
+body.patient-info .section {
+  max-width: 1200px;
+  margin: 0 auto !important;
+  padding: 0 1.5rem !important;
+}
+
+/* HERO SECTION: Force center alignment to match other pages */
+body.patient-info .hero {
+  text-align: center !important;
+}
+
+body.patient-info .hero h1,
+body.patient-info .hero p,
+body.patient-info .hero .button-group {
+  text-align: center !important;
+}
+
+/* Remove ALL margins between dropdown section containers */
+body.patient-info #forms, 
+body.patient-info #insurance, 
+body.patient-info #first-visit, 
+body.patient-info #comfort, 
+body.patient-info .emergency-info, 
+body.patient-info .contact-summary {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove padding from all section containers */
+body.patient-info .forms-container, 
+body.patient-info .insurance-container, 
+body.patient-info .first-visit-container, 
+body.patient-info .comfort-container, 
+body.patient-info .emergency-container {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  border-radius: 0 !important;
+}
+
+/* Make dropdown details elements stack directly on each other */
+body.patient-info .info-collapse {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid #e5e7eb !important;
+  border-bottom: 0 !important;
+  background: #fff !important;
+  border-radius: 0 !important;
+}
+
+/* Round the first and last dropdown sections */
+body.patient-info .info-collapse:first-child {
+  border-radius: 12px 12px 0 0 !important;
+}
+
+body.patient-info .info-collapse:last-child {
+  border-radius: 0 0 12px 12px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+/* If only one dropdown in a section */
+body.patient-info .info-collapse:only-child {
+  border-radius: 12px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+/* Style the summary headers */
+body.patient-info details summary {
+  margin: 0 !important;
+  padding: 1.5rem !important;
+  background: #f8fafc !important;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+body.patient-info details[open] summary {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Content area spacing */
+body.patient-info .info-section {
+  padding: 1.5rem !important;
+  margin: 0 !important;
+  background: #fff !important;
+}
+
+/* Contact section adjustments */
+body.patient-info .contact-summary, 
+body.patient-info .contact-grid {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.patient-info .contact-info {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Keep anchor targets below the sticky header on Patient Info */
+body.patient-info section[id] {
+  scroll-margin-top: calc(var(--site-header-height, 96px) + 16px);
+}

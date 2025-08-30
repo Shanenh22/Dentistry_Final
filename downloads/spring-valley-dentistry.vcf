@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Spring Valley Dentistry;;;;
+FN:Spring Valley Dentistry
+ORG:Spring Valley Dentistry
+TEL;TYPE=voice,work,pref:+1-972-852-2222
+EMAIL;TYPE=work:info@springvalleydentistry.com
+ADR;TYPE=work:;;14228 Midway Rd, Suite 100;Dallas;TX;75244;USA
+URL:https://springvalleydentistry.com/
+END:VCARD

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Ask a Question | Spring Valley Dental Associates</title>
+<meta content="index, follow" name="robots"/>
+<link href="https://springvalleydentistry.com/ask-a-question.html" rel="canonical"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/contact-form-styles.css" rel="stylesheet"/>
+<script>document.documentElement.classList.remove("no-js");</script>
+<!-- Preconnects for Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<!-- Preload site logo -->
+<link as="image" href="images/Spring-Valley-Dental.png" rel="preload"/>
+<!-- Inter font -->
+<link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" onload="this.rel='stylesheet'" rel="preload"/>
+<noscript>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+</noscript>
+<!-- Montserrat font (Optional – Design Brief headings) -->
+<link as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;display=swap" onload="this.rel='stylesheet'" rel="preload"/>
+<noscript>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+</noscript>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KY64HPT0ER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KY64HPT0ER');
+</script>
+<meta name="description" content="Spring Valley Dental Associates - Ask A Question in Dallas, TX."/>
+</head>
+<body>
+<!-- Skip link -->
+<a class="skip-to-content" href="#main">Skip to content</a>
+<header class="site-header" role="banner">
+    <!-- Global contact top bar -->
+    <div class="top-bar">
+      <span>Spring Valley Dental Associates • 14228 Midway Rd, Suite 100, Dallas, TX 75244</span>
+      <a href="tel:+19728522222">Call: (972) 852-2222</a>
+    </div>
+<div class="navbar">
+<a aria-label="Spring Valley Dental Associates home" class="logo" href="index.html">
+<picture>
+<source srcset="images/Spring-Valley-Dental.svg" type="image/svg+xml"/>
+<img alt="Spring Valley Dental Associates logo" decoding="async" fetchpriority="high" height="140" loading="eager" src="images/Spring-Valley-Dental.png" width="300"/>
+</picture>
+</a>
+<nav aria-label="Primary" class="site-nav" hidden="" id="site-nav">
+<ul class="site-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="emergency.html">Emergency</a></li>
+<li><a data-nowrap="" href="patient-info.html">Patient Info</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a class="cta" data-nowrap="" href="contact.html">Book Online</a></li>
+</ul>
+</nav>
+<button aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation menu" class="hamburger" id="nav-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="nav-overlay" hidden="" id="nav-overlay"></div>
+</header>
+<main class="section" style="max-width: 900px; margin-inline: auto;">
+<form class="contact-form" id="ask-form" novalidate="">
+<h1>Ask a Question</h1>
+<p class="intro">Have a quick question? Fill out the form below and our team will reply by email or phone.</p>
+<!-- Honeypot + start time for anti-spam -->
+<div aria-hidden="true" class="hp-wrap" hidden="">
+<label for="company">Company</label>
+<input autocomplete="organization" id="company" name="company" tabindex="-1" type="text"/>
+<input id="startTime" name="startTime" type="hidden"/>
+</div>
+<div class="form-row">
+<div class="form-group" id="fg-firstName">
+<label for="firstName">First name</label>
+<input autocomplete="given-name" class="form-control" id="firstName" name="firstName" required="" type="text"/>
+<div class="error" id="err-firstName"></div>
+</div>
+<div class="form-group" id="fg-lastName">
+<label for="lastName">Last name</label>
+<input autocomplete="family-name" class="form-control" id="lastName" name="lastName" required="" type="text"/>
+<div class="error" id="err-lastName"></div>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group" id="fg-email">
+<label for="email">Email</label>
+<input autocomplete="email" class="form-control" id="email" inputmode="email" name="email" placeholder="name@example.com" required="" type="email"/>
+<div class="error" id="err-email"></div>
+</div>
+<div class="form-group" id="fg-phone">
+<label for="phone">Phone</label>
+<input autocomplete="tel" class="form-control" id="phone" inputmode="tel" name="phone" placeholder="(555) 123-4567" required="" type="tel"/>
+<div class="error" id="err-phone"></div>
+</div>
+</div>
+<div class="form-group" id="fg-topic">
+<label for="topic">What is your question about?</label>
+<select class="form-control" id="topic" name="topic" required="">
+<option value="">Select a topic…</option>
+<option>Appointments &amp; scheduling</option>
+<option>Insurance &amp; benefits</option>
+<option>Treatment &amp; recommendations</option>
+<option>Post-visit concerns</option>
+<option>Pricing &amp; financing</option>
+<option>Other</option>
+</select>
+<div class="error" id="err-topic"></div>
+</div>
+<div class="form-group" id="fg-message">
+<label for="message">Your question</label>
+<textarea class="form-control" id="message" name="message" required="" rows="6"></textarea>
+<div class="error" id="err-message"></div>
+</div>
+<!-- Lightweight human challenge -->
+<div class="form-group challenge" id="fg-chal">
+<label for="challenge" id="chal-label">Quick check: <span id="chal-q">Loading…</span></label>
+<input autocomplete="off" class="form-control" id="challenge" inputmode="numeric" name="challenge" required="" type="text"/>
+<div class="error" id="err-challenge"></div>
+</div>
+<div class="button-group">
+<button class="button-primary" type="submit">Send</button>
+</div>
+<p class="disclaimer">By submitting, you consent to be contacted about your question. We never share your information.</p>
+<div class="captcha" id="cf-turnstile"></div>
+</form>
+</main>
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-column">
+<h4>Contact Us</h4>
+<ul>
+<li>Spring Valley Dental Associates</li>
+<li>14228 Midway Rd, Suite 100</li>
+<li>Dallas, TX 75244</li>
+<li>Phone: <a href="tel:+19728522222">(972) 852-2222</a></li>
+<li>Email: <a href="mailto:info@springvalleydentistry.com">info@springvalleydentistry.com</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="about.html">About Us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a data-nowrap="" href="patient-info.html">Patient Info</a></li>
+<li><a href="ask-a-question.html">Ask a Question</a></li>
+<li><a href="contact.html">Book Online</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h4>Office Hours</h4>
+<ul>
+<li>Mon - Fri: 9:00 AM - 5:00 PM</li>
+<li>Saturday: By appointment</li>
+<li>Sunday: Closed</li>
+<li>Find us on <a href="https://www.google.com/maps/search/?api=1&amp;query=14228+Midway+Rd+Suite+100,+Dallas,+TX+75244" rel="noopener" target="_blank">Google Maps</a>.</li>
+</ul>
+</div>
+</div>
+<p class="copy">© 2025 Spring Valley Dental Associates. All rights reserved.</p>
+</footer>
+<script>
+    (function() {
+      const form = document.getElementById('ask-form');
+      const toAddress = 'info@springvalleydental.com';
+
+      // Spam controls
+      const hp = document.getElementById('company');
+      const startTime = document.getElementById('startTime');
+      startTime.value = Date.now().toString();
+
+      // Simple math challenge
+      const qEl = document.getElementById('chal-q');
+      const answerEl = document.getElementById('challenge');
+      const a = Math.floor(3 + Math.random() * 7); // 3..9
+      const b = Math.floor(2 + Math.random() * 8); // 2..9
+      const ans = a + b;
+      qEl.textContent = `${a} + ${b} = ?`;
+
+      // Rate limit (client-side) – block >3 sends/hour
+      function tooManySubmissions() {
+        try {
+          const key = 'svd_ask_submissions';
+          const now = Date.now();
+          const hour = 60*60*1000;
+          let arr = JSON.parse(localStorage.getItem(key) || '[]').filter(t => now - t < hour);
+          if (arr.length >= 3) return true;
+          arr.push(now);
+          localStorage.setItem(key, JSON.stringify(arr));
+          return false;
+        } catch(e) { return false; }
+      }
+
+      function setError(id, msg) {
+        const fg = document.getElementById('fg-' + id);
+        const err = document.getElementById('err-' + id);
+        if (fg) fg.classList.add('invalid');
+        if (err) err.textContent = msg || '';
+      }
+      function clearError(id) {
+        const fg = document.getElementById('fg-' + id);
+        const err = document.getElementById('err-' + id);
+        if (fg) fg.classList.remove('invalid');
+        if (err) err.textContent = '';
+      }
+
+      function validEmail(v) {
+        // Simple and robust email test
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+      }
+      function validPhone(v) {
+        // Accept common US formats and E.164; require 10–15 digits
+        const digits = v.replace(/\D+/g, '');
+        return digits.length >= 10 && digits.length <= 15;
+      }
+
+      // Field refs
+      const firstName = document.getElementById('firstName');
+      const lastName  = document.getElementById('lastName');
+      const email     = document.getElementById('email');
+      const phone     = document.getElementById('phone');
+      const topic     = document.getElementById('topic');
+      const message   = document.getElementById('message');
+
+      // Live-clear on input
+      [firstName,lastName,email,phone,topic,message,answerEl].forEach(el => {
+        el.addEventListener('input', () => clearError(el.id.replace('challenge','chal')));
+        el.addEventListener('blur',  () => clearError(el.id.replace('challenge','chal')));
+      });
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Reset errors
+        ['firstName','lastName','email','phone','topic','message','chal'].forEach(clearError);
+
+        // Honeypot check
+        if (hp.value) { setError('firstName', 'Something went wrong.'); return; }
+
+        // Min fill time (5s)
+        const elapsed = Date.now() - Number(startTime.value || 0);
+        if (elapsed < 5000) { setError('chal', 'Please take a moment to complete the form.'); return; }
+
+        // Client rate-limit
+        if (tooManySubmissions()) { setError('chal', 'Please try again later.'); return; }
+
+        let ok = true;
+        if (!firstName.value.trim()) { setError('firstName', 'First name is required'); ok = false; }
+        if (!lastName.value.trim())  { setError('lastName',  'Last name is required');  ok = false; }
+        if (!validEmail(email.value)) { setError('email', 'Enter a valid email address'); ok = false; }
+        if (!validPhone(phone.value)) { setError('phone', 'Enter a valid phone number'); ok = false; }
+        if (!topic.value)             { setError('topic', 'Select a topic'); ok = false; }
+        if (!message.value.trim())    { setError('message', 'Please enter your question'); ok = false; }
+        if (String(ans) !== answerEl.value.trim()) { setError('chal','Incorrect answer'); ok = false; }
+
+        if (!ok) return;
+
+        // Compose mailto with sanitized body
+        const lines = [
+          `Name: ${firstName.value.trim()} ${lastName.value.trim()}`,
+          `Email: ${email.value.trim()}`,
+          `Phone: ${phone.value.trim()}`,
+          `Topic: ${topic.value}`,
+          '',
+          message.value.trim()
+        ];
+        const subject = encodeURIComponent('Website Question – Spring Valley Dental Associates');
+        const body = encodeURIComponent(lines.join('\n'));
+        const href = `mailto:${toAddress}?subject=${subject}&body=${body}`;
+        window.location.href = href;
+      });
+    })();
+  </script>
+<script defer="" src="nav.js"></script>
+<script defer="" src="site-config.js"></script>
+<script defer="" src="analytics.js"></script>
+<script defer="" src="form-submit.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Contact API (API Gateway HTTP API + Lambda + SES)
+
+Parameters:
+  FromEmail:
+    Type: String
+    Description: Verified SES email address to send from
+  ToEmail:
+    Type: String
+    Description: Recipient email address
+
+Globals:
+  Function:
+    Runtime: nodejs18.x
+    Timeout: 10
+    MemorySize: 128
+
+Resources:
+  ContactApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowOrigins:
+          - '*'
+        AllowMethods:
+          - POST
+        AllowHeaders:
+          - Content-Type
+          - x-requested-with
+
+  ContactFn:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: index.handler
+      Environment:
+        Variables:
+          FROM_EMAIL: !Ref FromEmail
+          TO_EMAIL: !Ref ToEmail
+          TURNSTILE_SECRET: "" # optional: set in console/SSM
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - ses:SendEmail
+                - ses:SendRawEmail
+              Resource: "*"
+      Events:
+        ContactRoute:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref ContactApi
+            Path: /contact
+            Method: POST
+
+Outputs:
+  ApiBaseUrl:
+    Value: !Sub "https://${ContactApi}.execute-api.${AWS::Region}.amazonaws.com"
+    Description: Base URL of the HTTP API

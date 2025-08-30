@@ -1,0 +1,44 @@
+<html><head><title>Header | Spring Valley Dental Associates</title><meta content="Header | Spring Valley Dental Associates at Spring Valley Dental Associates in Dallas, TX. Call (972) 852-2222 or email info@springvalleydentistry.com to schedu" name="description"/></head><body><!--
+  Shared header for Spring Valley Dental Associates website.
+
+  This file defines the sitewide navigation bar and logo. It can be
+  included dynamically on every page via a simple JavaScript fetch.
+  Updating links or swapping out the logo only requires editing this
+  single file, making maintenance easy when new pages are added or
+  branding changes occur.
+-->
+<header class="site-header" role="banner">
+<!-- Global contact top bar -->
+<div class="top-bar">
+<span>Spring Valley Dental Associates • 14228 Midway Rd, Suite 100, Dallas, TX 75244</span>
+<a href="tel:+19728522222">Call: (972) 852-2222</a>
+</div>
+<div class="navbar">
+<a aria-label="Spring Valley Dental Associates home" class="logo" href="index.html">
+<picture>
+<source srcset="images/Spring-Valley-Dental.svg" type="image/svg+xml"/>
+<img alt="Spring Valley Dental Associates logo" decoding="async" fetchpriority="high" height="140" loading="eager" src="images/Spring-Valley-Dental.png" width="300"/>
+</picture>
+</a>
+<nav aria-label="Primary" class="site-nav" hidden="" id="site-nav">
+<ul class="site-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="emergency.html">Emergency</a></li>
+<li><a data-nowrap="" href="patient-info.html">Patient Info</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a class="cta" data-nowrap="" href="contact.html">Book Online</a></li>
+</ul>
+</nav>
+<button aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation menu" class="hamburger" id="nav-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="nav-overlay" hidden="" id="nav-overlay"></div>
+</header>
+<main id="main">
+<script defer="" src="nav.js"></script>
+</main></body></html>

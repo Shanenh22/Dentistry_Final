@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: http://www.springvalleydentistry.com/sitemap.xml

@@ -1,0 +1,26 @@
+name: Deploy Contact API (SAM)
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'infrastructure/sam-contact-api/**'
+
+jobs:
+  deploy-api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/setup-sam@v2
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - name: Build
+        working-directory: infrastructure/sam-contact-api
+        run: sam build --beta-features
+      - name: Deploy
+        working-directory: infrastructure/sam-contact-api
+        run: |
+          sam deploy --stack-name svd-contact-api --capabilities CAPABILITY_IAM           --parameter-overrides FromEmail=${{ secrets.FROM_EMAIL }} ToEmail=${{ secrets.TO_EMAIL }}           --no-confirm-changeset --resolve-s3 --region ${{ secrets.AWS_REGION }}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Patient Inquiry - Spring Valley Dental Associates</title>
+<script>document.documentElement.classList.remove("no-js");</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="image" href="images/Spring-Valley-Dental.png" rel="preload"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" onload="this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/></noscript>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KY64HPT0ER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KY64HPT0ER');
+</script>
+<meta name="description" content="Spring Valley Dental Associates - Email Template in Dallas, TX."/>
+</head>
+<body>
+<div class="email-container">
+<!-- Header -->
+<div class="email-header">
+<div class="logo">Spring Valley Dental Associates</div>
+<p>New Patient Inquiry Received</p>
+<div class="priority-badge priority-{{urgency}}">{{urgency_text}}</div>
+</div>
+<!-- Body -->
+<div class="email-body">
+<!-- Patient Information -->
+<div class="section">
+<h3>Patient Information</h3>
+<div class="info-row">
+<span class="label">Name:</span>
+<span class="value">{{firstName}} {{lastName}}</span>
+</div>
+<div class="info-row">
+<span class="label">Phone:</span>
+<span class="value">{{phone}}</span>
+</div>
+<div class="info-row">
+<span class="label">Email:</span>
+<span class="value">{{email}}</span>
+</div>
+<div class="info-row">
+<span class="label">Date of Birth:</span>
+<span class="value">{{dateOfBirth}}</span>
+</div>
+<div class="info-row">
+<span class="label">Preferred Contact:</span>
+<span class="value">{{contactMethod}}</span>
+</div>
+</div>
+<!-- Contact Reason -->
+<div class="section">
+<h3>Contact Details</h3>
+<div class="info-row">
+<span class="label">Primary Reason:</span>
+<span class="value">{{contactReason}}</span>
+</div>
+<div class="info-row">
+<span class="label">Urgency Level:</span>
+<span class="value">{{urgency}}</span>
+</div>
+<div class="info-row">
+<span class="label">Services of Interest:</span>
+</div>
+<div class="services-list">
+                    {{services_tags}}
+                </div>
+</div>
+<!-- Appointment Preferences -->
+<div class="section">
+<h3>Appointment Preferences</h3>
+<div class="info-row">
+<span class="label">Preferred Date:</span>
+<span class="value">{{preferredDate}}</span>
+</div>
+<div class="info-row">
+<span class="label">Preferred Time:</span>
+<span class="value">{{preferredTime}}</span>
+</div>
+<div class="info-row">
+<span class="label">Available Days:</span>
+<span class="value">{{availability}}</span>
+</div>
+</div>
+<!-- Additional Information -->
+<div class="section">
+<h3>Additional Information</h3>
+<div class="info-row">
+<span class="label">Referral Source:</span>
+<span class="value">{{referralSource}}</span>
+</div>
+<div class="info-row">
+<span class="label">Has Insurance:</span>
+<span class="value">{{insurance}}</span>
+</div>
+</div>
+<!-- Patient Message -->
+<div class="section">
+<h3>Patient Message</h3>
+<div class="message-section">
+                    {{message}}
+                </div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="action-buttons">
+<a class="btn btn-primary" href="tel:{{phone}}">Call Patient</a>
+<a class="btn btn-secondary" href="mailto:{{email}}">Email Patient</a>
+</div><div class="footer">
+<p>Spring Valley Dental Associates | 14228 Midway Rd, Suite 100, Dallas, TX 75244</p>
+<p>This email was generated automatically from your website contact form.</p>
+</div>
+</div>
+<script defer="" src="nav.js"></script>
+<script defer="" src="site-config.js"></script>
+<script defer="" src="analytics.js"></script>
+</body>
+</html>

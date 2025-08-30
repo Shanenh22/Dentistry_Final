@@ -1,0 +1,1 @@
+/* scripts.js shim - header/footer injection disabled (using static HTML) */

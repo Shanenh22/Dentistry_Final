@@ -1,0 +1,650 @@
+/* Open Dental Contact Form Integration Styles - Spring Valley Dental Associates */
+/* Save as: css/contact-form-styles.css (replaces previous version) */
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(14, 54, 90, 0.1);
+  overflow: hidden;
+}
+/* Force-hide honeypot on all screens */
+.hp-wrap { display: none !important; }
+
+.contact-header {
+  background: linear-gradient(135deg, var(--color-primary, #0E365A) 0%, var(--color-primary-accent, #3DA6D5) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.contact-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  position: relative;
+  color: white;
+}
+
+.contact-header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  opacity: 0.95;
+  position: relative;
+  color: white;
+}
+
+.form-container {
+  padding: 3rem 2rem;
+  background: var(--color-neutral-light, #F7FAFC);
+}
+
+/* Form Options Grid */
+.form-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.form-option-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(14, 54, 90, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-option-card::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-primary-accent, #3DA6D5);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.form-option-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(14, 54, 90, 0.15);
+  border-color: var(--color-primary-accent, #3DA6D5);
+}
+
+.form-option-card:hover::before {
+  transform: scaleX(1);
+}
+
+.form-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.form-option-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--color-primary, #0E365A);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.form-option-card p {
+  color: var(--color-text-secondary, #7B8A97);
+  margin-bottom: 16px;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-details {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  font-size: 0.85rem;
+}
+
+.time-estimate, .form-count {
+  color: var(--color-text-secondary, #7B8A97);
+  background: var(--color-neutral-medium, #EEF2F6);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.form-link-btn {
+  display: inline-block;
+  background: var(--color-primary-accent, #3DA6D5);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.form-link-btn:hover {
+  background: var(--color-primary, #0E365A);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(14, 54, 90, 0.3);
+}
+
+/* Priority-specific styling */
+.priority-emergency .form-link-btn {
+  background: var(--color-alert, #E46C5E);
+}
+
+.priority-emergency .form-link-btn:hover {
+  background: #d63031;
+}
+
+.priority-new-patient .form-icon {
+  color: var(--color-primary-accent, #3DA6D5);
+}
+
+.priority-existing .form-icon {
+  color: var(--color-success, #8FD6C8);
+}
+
+.priority-emergency .form-icon {
+  color: var(--color-alert, #E46C5E);
+}
+
+.priority-consultation .form-icon {
+  color: var(--color-primary, #0E365A);
+}
+
+/* Contact Alternatives Section */
+.contact-alternatives {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 32px;
+  border-left: 4px solid var(--color-primary-accent, #3DA6D5);
+}
+
+.contact-alternatives h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--color-primary, #0E365A);
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: var(--color-neutral-light, #F7FAFC);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  background: var(--color-neutral-medium, #EEF2F6);
+  transform: translateY(-2px);
+}
+
+.method-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.method-info h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--color-primary, #0E365A);
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+.method-info p {
+  color: var(--color-text-secondary, #7B8A97);
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  background: var(--color-primary-accent, #3DA6D5);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: var(--color-primary, #0E365A);
+  transform: translateY(-1px);
+}
+
+/* Security Notice */
+.security-notice {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--color-neutral-medium, #EEF2F6);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--color-success, #8FD6C8);
+}
+
+.security-icon {
+  font-size: 2rem;
+  color: var(--color-primary, #0E365A);
+  flex-shrink: 0;
+}
+
+.security-text strong {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--color-primary, #0E365A);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.security-text p {
+  color: var(--color-text-primary, #24313A);
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Office Information Section */
+.office-info-section {
+  max-width: 1000px;
+  margin: 48px auto 0;
+  padding: 0 2rem;
+}
+
+.office-info-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--color-primary, #0E365A);
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 2rem;
+}
+
+.office-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.office-info-card {
+  background: white;
+  padding: 32px 24px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(14, 54, 90, 0.08);
+  transition: all 0.3s ease;
+}
+
+.office-info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(14, 54, 90, 0.15);
+}
+
+.office-info-card h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--color-primary, #0E365A);
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.office-info-card p {
+  color: var(--color-text-secondary, #7B8A97);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.office-info-card a {
+  color: var(--color-primary-accent, #3DA6D5);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.office-info-card a:hover {
+  color: var(--color-primary, #0E365A);
+}
+
+.directions-btn {
+  display: inline-block;
+  background: var(--color-primary, #0E365A);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.directions-btn:hover {
+  background: var(--color-primary-accent, #3DA6D5);
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-header {
+    padding: 2rem 1rem;
+  }
+
+  .contact-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .form-container {
+    padding: 2rem 1rem;
+  }
+
+  .form-options-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-option-card {
+    padding: 24px 16px;
+  }
+
+  .contact-alternatives {
+    padding: 24px 16px;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .office-info-section {
+    padding: 0 1rem;
+  }
+
+  .office-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-option-card {
+    padding: 20px 12px;
+  }
+
+  .form-icon {
+    font-size: 2.5rem;
+  }
+
+  .security-notice {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Additional mobile improvements for contact forms */
+@media (max-width: 480px) {
+  .form-section {
+    padding: 1rem !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem !important;
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+  
+  .checkbox-group {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem;
+  }
+  
+  .contact-header h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .contact-header p {
+    font-size: 1rem !important;
+  }
+  
+  .submit-btn {
+    padding: 1rem 2rem !important;
+    font-size: 1rem !important;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Fix form option cards on mobile */
+@media (max-width: 768px) {
+  .form-options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+  
+  .form-option-card {
+    padding: 1.5rem 1rem !important;
+  }
+  
+  .contact-methods {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .contact-method {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}
+/* === Ask a Question – Mobile-first design lock === */
+/* Brand tokens (from the design brief) */
+:root {
+  --svd-navy: #0E365A;       /* Dallas Navy */
+  --svd-sky: #3DA6D5;        /* Sky Blue (primary CTAs) */
+  --svd-porcelain: #F7FAFC;  /* Page background */
+  --svd-cloud: #EEF2F6;      /* Card/section bg */
+  --svd-ink: #24313A;        /* Body text */
+  --svd-gray: #7B8A97;       /* Secondary text */
+  --radius-lg: 16px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --shadow-card: 0 8px 24px rgba(14, 54, 90, 0.08);
+}
+
+/* Page background stays soothing on mobile */
+body {
+  background: var(--svd-porcelain);
+  color: var(--svd-ink);
+}
+/* Headings + labels use Montserrat */
+.contact-form h1,
+.contact-form label {
+  font-family: Montserrat, Inter, system-ui, Arial, sans-serif;
+}
+
+/* Contain the page content and keep breathing room on small screens */
+.section {
+  padding-inline: var(--space-3);
+  padding-block: var(--space-5);
+}
+
+
+/* Contain the page content and keep breathing room on small screens */
+.section {
+  padding-inline: var(--space-3);
+  padding-block: var(--space-5);
+}
+
+/* Keep the form styled as a card at all sizes */
+.contact-form {
+  background: var(--svd-cloud);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: clamp(var(--space-4), 4vw, var(--space-5));
+  border: 1px solid rgba(14, 54, 90, 0.06);
+}
+
+/* Branded header treatment inside the card */
+.contact-form h1 {
+  font-weight: 700;
+  color: var(--svd-navy);
+  margin: 0 0 var(--space-2);
+  line-height: 1.2;
+}
+.contact-form .intro {
+  color: var(--svd-gray);
+  margin: 0 0 var(--space-4);
+}
+
+/* Inputs keep soft surfaces and legible touch targets */
+.contact-form .form-group label {
+  font-weight: 600;
+  color: var(--svd-ink);
+  margin-bottom: 6px;
+  display: inline-block;
+}
+.contact-form .form-control,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(14, 54, 90, 0.15);
+  border-radius: 12px;
+  padding: 12px 14px;
+  line-height: 1.35;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(14, 54, 90, 0.02) inset;
+}
+.contact-form .form-control:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--svd-sky);
+  box-shadow: 0 0 0 3px rgba(61, 166, 213, 0.22);
+}
+
+/* Error state stays consistent with the design */
+.contact-form .invalid .form-control {
+  border-color: #E46C5E; /* Coral from brief */
+  box-shadow: 0 0 0 3px rgba(228, 108, 94, 0.18);
+}
+.contact-form .error {
+  color: #E46C5E;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* Button = Sky Blue primary with Navy hover */
+.button-primary,
+.contact-form .button-primary {
+  background: var(--svd-sky);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .04s ease, box-shadow .2s ease, background-color .2s ease;
+  box-shadow: 0 6px 16px rgba(61, 166, 213, 0.25);
+}
+.button-primary:hover {
+  background: #3199C7; /* slightly deeper Sky */
+  transform: translateY(-1px);
+}
+.button-primary:active {
+  transform: translateY(0);
+}
+
+/* Grid that gracefully collapses */
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+@media (min-width: 640px) {
+  .contact-form .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+}
+
+/* Keep challenge + button area styled on mobile */
+.contact-form .challenge {
+  background: #fff;
+  border: 1px dashed rgba(14, 54, 90, 0.2);
+  border-radius: 12px;
+  padding: var(--space-3);
+}
+.contact-form .button-group {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-start;
+  margin-top: var(--space-3);
+}
+
+/* Disclaimer remains subtle but readable */
+.contact-form .disclaimer {
+  color: var(--svd-gray);
+  font-size: .95rem;
+  margin-top: var(--space-3);
+}
+
+/* Ensure the logo/header area above doesn't crowd mobile layout */
+.site-header + .section {
+  margin-top: var(--space-4);
+}
+
+/* Tighten vertical rhythm on very small screens */
+@media (max-width: 380px) {
+  .contact-form {
+    border-radius: 12px;
+    padding: var(--space-3);
+  }
+  .button-primary { padding: 11px 16px; }
+}
+
+/* Option spacing improvements (best-effort; browser-dependent) */
+select option { padding: .5rem .75rem; }
