@@ -6056,3 +6056,18 @@ body.patient-info .top-bar span { color: #fff !important; }
 .platform-rating .stars svg {
   fill: currentColor !important;
 }
+/* Space between stacked CTA buttons */
+.cta,
+.button-group {
+  display: flex;
+  flex-wrap: wrap;   /* lets them stack on small screens */
+  gap: 12px;         /* adds spacing both horizontally & vertically */
+}
+
+/* Make buttons expand full-width on very narrow screens */
+@media (max-width: 600px) {
+  .cta a,
+  .button-group a {
+    flex: 1 1 100%;
+  }
+}
