@@ -6033,3 +6033,26 @@ body.patient-info .top-bar span { color: #fff !important; }
 .footer .icons-only a svg { width: 20px !important; height: 20px !important; }
 .footer .icons-only a      { width: 32px; height: 32px; }
 
+/* Whatever container currently holds the two links */
+.patients-reviews-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Or, minimally, add bottom margin to each link */
+.patients-reviews-cta a { margin-bottom: 12px; }
+
+/* --- Star color + mobile emoji fallback --- */
+:root { --google-star: #FBBC05; }          /* Google yellow */
+
+.story-rating .stars,
+.platform-rating .stars,
+.review-summary-container .rating-stars,
+.review-summary-container .rating-stars .star {
+  color: var(--google-star) !important;
+  font-family: Arial, Helvetica, Roboto, "Segoe UI", sans-serif;  /* avoid emoji font */
+  line-height: 1;
+}
+
+/* If you ever use SVG/icon stars, make them inherit the color */
+.story-rating .stars svg,
+.platform-rating .stars svg {
+  fill: currentColor !important;
+}
